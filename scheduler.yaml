@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: random-scheduler
+  namespace: kube-system
+spec:
+  containers:
+  - image: random-scheduler:v0.1
+    name: random-scheduler
+    imagePullPolicy: IfNotPresent
+    resources:
+      requests:
+        cpu: 100m
+

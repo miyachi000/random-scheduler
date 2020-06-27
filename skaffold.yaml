@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2alpha1
+kind: Config
+metadata:
+  name: random-scheduler
+build:
+  artifacts:
+  - image: random-scheduler
+deploy:
+  kubectl:
+    manifests:
+    - ./test/test-random-scheduler.yaml

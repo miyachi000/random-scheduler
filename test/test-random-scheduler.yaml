@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: random-scheduler
+  namespace: kube-system
+spec:
+  serviceAccountName: default
+  containers:
+  - image: random-scheduler:v0.1
+    name: random-scheduler
+    command: [ "sleep", "1d" ]
+  restartPolicy: Never
+
