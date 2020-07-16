@@ -10,7 +10,6 @@ spec:
   - image: alpine:latest
     name: test1
     command: [ "sleep", "1d" ]
-  restartPolicy: Never
 ---
 apiVersion: v1
 kind: Pod
@@ -23,4 +22,3 @@ spec:
   - image: alpine:latest
     name: test2
     command: [ "sleep", "1d" ]
-  restartPolicy: Never
